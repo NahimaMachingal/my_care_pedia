@@ -9,17 +9,13 @@ This project uses **Vite** for fast builds and development, along with **Redux T
 
 * ⚡ Built with **React 19** and **Vite**
 * 🎨 Styled using **Tailwind CSS**
-* 🗂️ Global state management via **Redux Toolkit**
 * 📱 Fully responsive design
-* 🔄 Modern UI icons using **lucide-react**
 
 ---
 
 ## 🛠️ Tech Stack
 
 * **Frontend:** React, Vite, Tailwind CSS
-* **State Management:** Redux Toolkit, React-Redux
-* **Icons:** Lucide React
 * **Linting & Code Quality:** ESLint
 
 ---
