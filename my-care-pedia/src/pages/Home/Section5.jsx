@@ -38,39 +38,38 @@ const Section5 = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#021633] to-[#04285b] text-white px-[110px]">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-gradient-to-b from-[#021633] to-[#04285b] text-white px-4 sm:px-6 md:px-[110px]">
+      <div className="container mx-auto">
         {/* Heading */}
-        <div className="mb-12">
-          <p className="text-[#00b3d0] font-bold font-header-serif text-2xl">Testimonials</p>
-          <h2 className="text-xl md:text-4xl font-bold mt-2">
+        <div className="mb-12 text-center lg:text-left">
+          <p className="text-[#00b3d0] font-bold font-header-serif text-lg sm:text-xl">
+            Testimonials
+          </p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 leading-snug">
             Hear What Others Are Saying
           </h2>
-          <p className="mt-4 text-gray-300 max-w-2xl">
-  At MyCarePedia, we're passionate about making healthcare easier and
-  more <br /> accessible. But don't just take our
-  word for it! Hear what our satisfied patients<br /> and providers have to say.
-</p>
-
-
-
-
-
-
+          <p className="mt-4 text-gray-300 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0">
+            At MyCarePedia, we're passionate about making healthcare easier and
+            more accessible. But don't just take our word for it! Hear what our
+            satisfied patients and providers have to say.
+          </p>
         </div>
 
-        {/* Desktop: 3 per row | Mobile/Medium: 1 card (slider) */}
+        {/* Desktop: grid | Mobile/Medium: slider */}
         <div className="relative">
+          {/* Desktop view */}
           <div className="hidden lg:grid grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <div
                 key={t.id}
-                className="bg-white text-[#04285b] rounded-2xl p-14 shadow-md flex flex-col justify-between relative"
+                className="bg-white text-[#04285b] rounded-2xl p-8 xl:p-14 shadow-md flex flex-col justify-between relative"
               >
-                <span className="absolute top-4 right-6 text-8xl text-[#04285b] font-bold">
+                <span className="absolute top-4 right-6 text-5xl xl:text-8xl text-[#04285b] font-bold">
                   ”
                 </span>
-                <p className="text-base text-gray-700 mb-6 text-left">{t.text}</p>
+                <p className="text-sm sm:text-base text-gray-700 mb-6 text-left leading-relaxed">
+                  {t.text}
+                </p>
                 <div className="flex items-center gap-3 text-left">
                   <img
                     src={avatar}
@@ -79,20 +78,22 @@ const Section5 = () => {
                   />
                   <div>
                     <p className="font-semibold text-[#04285b]">{t.name}</p>
-                    <p className="text-gray-500 text-sm">{t.role}</p>
+                    <p className="text-gray-500 text-xs sm:text-sm">
+                      {t.role}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Slider for md & below */}
+          {/* Mobile slider */}
           <div className="lg:hidden">
             <div className="bg-white text-[#04285b] rounded-2xl p-6 shadow-md flex flex-col justify-between relative">
               <span className="absolute top-4 right-6 text-4xl text-[#04285b] font-bold">
                 ”
               </span>
-              <p className="text-sm text-gray-700 mb-6">
+              <p className="text-sm sm:text-base text-gray-700 mb-6 leading-relaxed">
                 {testimonials[currentIndex].text}
               </p>
               <div className="flex items-center gap-3">
@@ -105,7 +106,7 @@ const Section5 = () => {
                   <p className="font-semibold text-[#04285b]">
                     {testimonials[currentIndex].name}
                   </p>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-500 text-xs sm:text-sm">
                     {testimonials[currentIndex].role}
                   </p>
                 </div>
@@ -113,7 +114,7 @@ const Section5 = () => {
             </div>
 
             {/* Arrows */}
-            <div className="flex justify-center gap-4 mt-8">
+            <div className="flex justify-center gap-4 mt-6">
               <button
                 onClick={handlePrev}
                 className="w-10 h-10 flex items-center justify-center bg-white text-[#04285b] rounded-lg shadow hover:bg-gray-100"

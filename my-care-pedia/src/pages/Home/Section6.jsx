@@ -61,41 +61,43 @@ const Section6 = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container px-28">
+      <div className="container px-4 sm:px-8 md:px-16 lg:px-28">
         {/* Heading */}
-        <div className="mb-12">
-          <p className="text-[#00b3d0] font-bold text-xl">What makes us unique?</p>
-          <h2 className="text-[22px] sm:text-[36px] md:text-[40px] text-[#04285b] text-main font-header-serif font-bold capitalize mt-2">
-  MyCarePedia: Your Family’s Health Heaven
-</h2>
+        <div className="mb-12 text-center sm:text-left">
+          <p className="text-[#00b3d0] font-bold text-lg sm:text-xl">
+            What makes us unique?
+          </p>
+          <h2 className="text-[20px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-[#04285b] font-header-serif font-bold capitalize mt-2">
+            MyCarePedia: Your Family’s Health Heaven
+          </h2>
 
-         <p className="mt-4 text-[18px] md:text-[18px] text-[#04285b] max-w-4xl leading-relaxed">
-  MyCarePedia isn&apos;t just a doctor&apos;s portal; it&apos;s a comprehensive healthcare hub
-  designed to simplify life for everyone in the family. Whether you&apos;re managing your
-  child&apos;s well-being or navigating your own health journey, MyCarePedia offers
-  unique features and benefits that make a real difference:
-</p>
-
+          <p className="mt-4 text-[16px] sm:text-[18px] text-[#04285b] max-w-4xl leading-relaxed mx-auto sm:mx-0">
+            MyCarePedia isn&apos;t just a doctor&apos;s portal; it&apos;s a comprehensive
+            healthcare hub designed to simplify life for everyone in the family.
+            Whether you&apos;re managing your child&apos;s well-being or navigating
+            your own health journey, MyCarePedia offers unique features and
+            benefits that make a real difference:
+          </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group bg-white rounded-2xl shadow-md p-8 text-center transition-all duration-300 hover:bg-[#04285b] hover:shadow-lg"
+              className="group bg-white rounded-2xl shadow-md p-6 sm:p-8 text-center transition-all duration-300 hover:bg-[#04285b] hover:shadow-lg"
             >
               <div className="flex justify-center mb-6">
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-20 h-20 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                  className="w-16 h-16 sm:w-20 sm:h-20 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
               </div>
-              <h3 className="text-xl font-bold text-[#04285b] mb-2 transition-colors duration-300 group-hover:text-white">
+              <h3 className="text-lg sm:text-xl font-bold text-[#04285b] mb-2 transition-colors duration-300 group-hover:text-white">
                 {feature.title}
               </h3>
-              <p className="text-base text-gray-600 transition-colors duration-300 group-hover:text-gray-200">
+              <p className="text-sm sm:text-base text-gray-600 transition-colors duration-300 group-hover:text-gray-200">
                 {feature.desc}
               </p>
             </div>
